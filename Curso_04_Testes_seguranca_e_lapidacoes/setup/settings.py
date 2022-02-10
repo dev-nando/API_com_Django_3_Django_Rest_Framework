@@ -76,6 +76,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
+                'django.core.context_processors.i18n',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -172,3 +173,9 @@ CORS_ALLOWED_ORIGINS = [
 # SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 
 # SESSIONS_CACHE_ALIAS = 'default'
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/'),
+)
+
+USE_I18N = True
